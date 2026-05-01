@@ -7,38 +7,42 @@ const description = 'Request a fictional consultation with Meridian & Co Advisor
 
 <SiteLayout title={title} description={description} path="/contact/">
   <section class="bg-ivory">
-    <div class="container-shell grid gap-10 py-20 lg:grid-cols-[0.82fr_1.18fr]">
+    <div class="container-shell grid gap-10 py-16 lg:grid-cols-[0.78fr_1.22fr]">
       <div>
         <p class="eyebrow">Consultation Request</p>
-        <h1 class="page-heading mt-4">Start with a focused conversation.</h1>
+        <h1 class="page-heading mt-4">Start with a focused enquiry memo.</h1>
         <p class="body-copy mt-6">
           This form is a static UI for a fictional professional services demo. It does not create real consultations or advisory engagements.
         </p>
-        <div class="mt-8 space-y-4 border border-line bg-paper p-6 text-sm text-slate">
-          <p><strong class="text-navy">Phone:</strong> (000) 000-0000</p>
-          <p><strong class="text-navy">Email:</strong> advisors@example.com</p>
-          <p><strong class="text-navy">Office:</strong> Suite 000, Business District, Your City</p>
-          <p><strong class="text-navy">Business Hours:</strong> Mon-Fri 08:30-17:00</p>
+        <div class="mt-8 divide-y divide-line border-y border-line text-sm text-slate">
+          <p class="grid gap-2 py-4 sm:grid-cols-[0.35fr_1fr]"><strong class="text-navy">Phone</strong><span>Phone placeholder for demo</span></p>
+          <p class="grid gap-2 py-4 sm:grid-cols-[0.35fr_1fr]"><strong class="text-navy">Email</strong><span>Email placeholder for demo</span></p>
+          <p class="grid gap-2 py-4 sm:grid-cols-[0.35fr_1fr]"><strong class="text-navy">Office</strong><span>Office location placeholder</span></p>
+          <p class="grid gap-2 py-4 sm:grid-cols-[0.35fr_1fr]"><strong class="text-navy">Hours</strong><span>Business hours placeholder</span></p>
         </div>
       </div>
 
-      <form class="board-card p-6 sm:p-8" aria-label="Consultation request form">
+      <form class="document-panel p-6 sm:p-8" aria-label="Consultation request form">
+        <div class="mb-6 border-b border-line pb-5">
+          <p class="field-label">Static Demo Form</p>
+          <h2 class="mt-2 font-display text-3xl text-navy">Enquiry Details</h2>
+        </div>
         <div class="grid gap-5 sm:grid-cols-2">
           <label class="block">
             <span class="text-sm font-bold text-navy">Name</span>
-            <input class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold" type="text" name="name" placeholder="Your name" />
+            <input class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/30" type="text" name="name" placeholder="Your name" />
           </label>
           <label class="block">
             <span class="text-sm font-bold text-navy">Company</span>
-            <input class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold" type="text" name="company" placeholder="Company name" />
+            <input class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/30" type="text" name="company" placeholder="Company name" />
           </label>
           <label class="block sm:col-span-2">
             <span class="text-sm font-bold text-navy">Email</span>
-            <input class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold" type="email" name="email" placeholder="you@example.com" />
+            <input class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/30" type="email" name="email" placeholder="you@example.com" />
           </label>
           <label class="block">
             <span class="text-sm font-bold text-navy">Service Area</span>
-            <select class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold" name="service">
+            <select class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/30" name="service">
               <option>Business advisory</option>
               <option>Tax planning</option>
               <option>Accounting support</option>
@@ -49,7 +53,7 @@ const description = 'Request a fictional consultation with Meridian & Co Advisor
           </label>
           <label class="block">
             <span class="text-sm font-bold text-navy">Preferred Contact</span>
-            <select class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold" name="contact-method">
+            <select class="mt-2 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/30" name="contact-method">
               <option>Email</option>
               <option>Phone</option>
               <option>Video call</option>
@@ -57,19 +61,19 @@ const description = 'Request a fictional consultation with Meridian & Co Advisor
           </label>
           <label class="block sm:col-span-2">
             <span class="text-sm font-bold text-navy">Message</span>
-            <textarea class="mt-2 min-h-36 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold" name="message" placeholder="Tell us what you would like to discuss"></textarea>
+            <textarea class="mt-2 min-h-36 w-full border border-line bg-ivory px-4 py-3 text-ink outline-none focus:border-gold focus:ring-2 focus:ring-gold/30" name="message" placeholder="Tell us what you would like to discuss"></textarea>
           </label>
         </div>
-        <button type="button" class="primary-button mt-6">Request Consultation</button>
+        <button type="button" class="primary-button mt-6">Demo Form Only</button>
       </form>
     </div>
   </section>
 
   <section class="section-pad bg-paper">
     <div class="container-shell grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-stretch">
-      <div class="board-card p-8">
+      <div class="document-panel p-8">
         <p class="eyebrow">Office Placeholder</p>
-        <div class="mt-6 flex min-h-[340px] items-center justify-center bg-blue text-center">
+        <div class="mt-6 flex min-h-[340px] items-center justify-center border border-line bg-blue text-center">
           <p class="max-w-sm text-sm leading-6 text-slate">A real advisory firm website could include office directions, parking notes, or a map embed here. This demo keeps the site static and fast.</p>
         </div>
       </div>

@@ -1,19 +1,21 @@
 ---
 const insights = [
-  ['Preparing your business for growth', 'A fictional guide to reviewing systems, reporting, team capacity, and decision cadence before expansion.'],
-  ['What to review before tax season', 'A practical checklist-style preview for records, deadlines, obligations, and planning conversations.'],
-  ['How better reporting improves decisions', 'A short advisory article concept about turning finance data into clearer management decisions.'],
-  ['Building stronger business systems', 'A fictional operations-focused insight on repeatable processes, controls, and accountability rhythms.']
+  ['Briefing 01', 'Preparing your business for growth', 'Systems, reporting, team capacity, and decision cadence to review before expansion.'],
+  ['Briefing 02', 'What to review before tax season', 'Records, deadlines, obligations, and planning conversations to organize early.'],
+  ['Briefing 03', 'How better reporting improves decisions', 'Turning finance data into clearer management conversations and follow-up actions.'],
+  ['Briefing 04', 'Building stronger business systems', 'Repeatable process, controls, accountability, and documentation for calmer operations.']
 ];
 ---
 
-<div class="grid gap-5 md:grid-cols-2">
+<div class="divide-y divide-line border-y border-line">
   {insights.map((insight) => (
-    <article class="board-card p-7">
-      <p class="eyebrow">Fictional Insight</p>
-      <h3 class="mt-4 font-display text-3xl leading-tight text-navy">{insight[0]}</h3>
-      <p class="mt-4 text-sm leading-6 text-slate">{insight[1]}</p>
-      <p class="mt-8 border-t border-line pt-4 text-xs font-bold uppercase tracking-wide text-gold">Article preview</p>
+    <article class="grid gap-4 bg-paper px-5 py-6 transition hover:bg-ivory md:grid-cols-[0.26fr_0.74fr_0.32fr] md:items-start">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold">{insight[0]}</p>
+      <div>
+        <h3 class="font-display text-3xl leading-tight text-navy">{insight[1]}</h3>
+        <p class="mt-3 text-sm leading-6 text-slate">{insight[2]}</p>
+      </div>
+      <p class="border-l border-line pl-4 text-xs font-bold uppercase tracking-wide text-slate md:text-right md:border-l-0 md:pl-0">Fictional article preview</p>
     </article>
   ))}
 </div>

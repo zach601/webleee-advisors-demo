@@ -6,17 +6,29 @@ const description = 'Learn about Meridian & Co Advisors, a fictional careful and
 ---
 
 <SiteLayout title={title} description={description} path="/about/">
-  <section class="bg-ivory">
-    <div class="container-shell grid gap-10 py-20 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+  <section class="bg-paper">
+    <div class="container-shell grid gap-10 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
       <div>
         <p class="eyebrow">About the Firm</p>
-        <h1 class="page-heading mt-4">Careful advice, structured thinking, and steady execution.</h1>
+        <h1 class="page-heading mt-4">A fictional firm profile written with professional restraint.</h1>
         <p class="body-copy mt-6 max-w-2xl">
           Meridian & Co Advisors is a fictional professional services firm created for the Webleee portfolio. The firm is presented as careful, methodical, and experienced without claiming real clients, certifications, outcomes, or reviews.
         </p>
       </div>
-      <div class="board-card p-4">
-        <img class="h-[460px] w-full object-cover" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80" alt="Professional advisory team meeting" />
+      <div class="document-panel">
+        <div class="border-b border-line bg-navy px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] text-ivory/70">Firm Profile</div>
+        <div class="divide-y divide-line px-6">
+          {[
+            ['Purpose', 'Present complex business services in a way that feels calm, direct, and credible.'],
+            ['Audience', 'Business owners, leadership teams, and operators considering higher-trust advisory support.'],
+            ['Standard', 'No invented awards, certifications, client logos, reviews, or guaranteed financial results.']
+          ].map((row) => (
+            <div class="grid gap-2 py-5 sm:grid-cols-[0.28fr_1fr]">
+              <p class="field-label">{row[0]}</p>
+              <p class="text-sm leading-6 text-slate">{row[1]}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -27,16 +39,16 @@ const description = 'Learn about Meridian & Co Advisors, a fictional careful and
         <p class="eyebrow">Principles</p>
         <h2 class="section-heading mt-3">A professional tone built on restraint.</h2>
       </div>
-      <div class="grid gap-5 sm:grid-cols-2">
+      <div class="divide-y divide-line border-y border-line">
         {[
           ['Clarity', 'Plain language for complex topics, with direct explanations and practical structure.'],
           ['Discretion', 'A quieter brand system that feels appropriate for financial, legal, and advisory work.'],
           ['Process', 'A visible method that helps prospects understand how conversations move forward.'],
           ['Honesty', 'The demo clearly states that it is fictional and avoids misleading credibility claims.']
         ].map((item) => (
-          <article class="board-card p-6">
+          <article class="grid gap-3 bg-ivory px-5 py-6 sm:grid-cols-[0.25fr_1fr]">
             <h3 class="font-display text-3xl text-navy">{item[0]}</h3>
-            <p class="mt-3 text-sm leading-6 text-slate">{item[1]}</p>
+            <p class="text-sm leading-6 text-slate">{item[1]}</p>
           </article>
         ))}
       </div>
@@ -44,12 +56,14 @@ const description = 'Learn about Meridian & Co Advisors, a fictional careful and
   </section>
 
   <section class="section-pad bg-navy text-ivory">
-    <div class="container-shell max-w-4xl">
+    <div class="container-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
       <p class="eyebrow">Portfolio Purpose</p>
-      <h2 class="mt-4 font-display text-4xl leading-tight text-ivory sm:text-5xl">Professional service firms need websites that feel credible before the first call.</h2>
-      <p class="mt-6 text-base leading-7 text-ivory/70">
-        This fictional demo shows how a compact, structured website can support accountants, lawyers, consultants, advisors, brokers, and service companies with clear positioning and consultation pathways.
-      </p>
+      <div>
+        <h2 class="font-display text-4xl leading-tight text-ivory sm:text-5xl">Professional service firms need credibility before the first call.</h2>
+        <p class="mt-6 text-base leading-7 text-ivory/70">
+          This fictional demo shows how a compact, structured website can support accountants, lawyers, consultants, advisors, brokers, and service companies with clear positioning and consultation pathways.
+        </p>
+      </div>
     </div>
   </section>
 </SiteLayout>
