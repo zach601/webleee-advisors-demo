@@ -1,28 +1,21 @@
 ---
 const services = [
-  ['01', 'Business Advisory', 'Owner decisions, operating priorities, growth options, and management cadence.', 'Decision notes, action priorities, review rhythm.'],
-  ['02', 'Tax Planning', 'Planning copy for fictional businesses preparing records, timing, and obligations.', 'Record checklist, planning questions, deadline view.'],
-  ['03', 'Accounting Support', 'Monthly financial administration, bookkeeping coordination, and cleaner reporting habits.', 'Month-end rhythm, handover list, review notes.'],
-  ['04', 'Compliance Support', 'Policy, filing, documentation, and readiness workflows for regulated teams.', 'Obligation register, evidence list, responsibility map.'],
-  ['05', 'Strategy Consulting', 'Focused planning sessions around positioning, services, and operating constraints.', 'Workshop agenda, options memo, next-step plan.'],
-  ['06', 'Financial Reporting', 'Management report structures that make performance easier to discuss.', 'Dashboard outline, metric set, commentary template.'],
-  ['07', 'Risk Review', 'Process, governance, continuity, and internal-control conversations without guarantees.', 'Risk register, control notes, improvement priorities.']
+  ['Business Advisory', 'Structured guidance for owners reviewing operations, growth options, and decision points.'],
+  ['Tax Planning', 'Fictional planning copy for businesses preparing records, timing obligations, and future commitments.'],
+  ['Accounting Support', 'Monthly support, bookkeeping coordination, and clearer financial administration for growing teams.'],
+  ['Compliance Support', 'Organized workflows for policy, filing, reporting, and documentation readiness.'],
+  ['Strategy Consulting', 'Focused planning sessions for market positioning, service design, and operational priorities.'],
+  ['Financial Reporting', 'Management reporting structures that make performance easier to review and discuss.'],
+  ['Risk Review', 'Practical risk conversations around process, governance, continuity, and internal controls.']
 ];
 ---
 
-<div class="document-panel">
-  <div class="grid gap-4 bg-navy px-5 py-4 text-xs font-bold uppercase tracking-[0.18em] text-ivory/70 md:grid-cols-[0.18fr_0.32fr_1fr_0.55fr]">
-    <span>Ref</span>
-    <span>Service</span>
-    <span>Use Case</span>
-    <span>Example Output</span>
-  </div>
-  {services.map((service) => (
-    <article class="grid gap-4 border-t border-line px-5 py-5 md:grid-cols-[0.18fr_0.32fr_1fr_0.55fr] md:items-start">
-      <p class="font-display text-3xl text-gold">{service[0]}</p>
-      <h3 class="font-display text-2xl leading-tight text-navy">{service[1]}</h3>
-      <p class="text-sm leading-6 text-slate">{service[2]}</p>
-      <p class="text-sm font-semibold leading-6 text-navy">{service[3]}</p>
+<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+  {services.map((service, index) => (
+    <article class="board-card p-6">
+      <div class="mb-8 flex h-10 w-10 items-center justify-center bg-blue text-sm font-bold text-navy">{String(index + 1).padStart(2, '0')}</div>
+      <h3 class="font-display text-2xl text-navy">{service[0]}</h3>
+      <p class="mt-3 text-sm leading-6 text-slate">{service[1]}</p>
     </article>
   ))}
 </div>

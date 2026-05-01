@@ -8,101 +8,37 @@ const description = 'A fictional professional services website demo for accounta
 ---
 
 <SiteLayout title={title} description={description}>
-  <section class="border-b border-line bg-paper">
-    <div class="container-shell grid gap-10 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch lg:py-24">
-      <div class="flex flex-col justify-between gap-10">
-        <div>
-          <p class="eyebrow">Professional Services Website Demo</p>
-          <h1 class="display-heading mt-5">A boardroom-ready website for measured advice.</h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate">
-            Meridian & Co Advisors is a fictional advisory firm concept. The design shows how Webleee can present complex services with restraint, structure, and clear enquiry paths.
-          </p>
-        </div>
-        <div class="flex flex-col gap-3 sm:flex-row">
-          <a href="/contact/" class="primary-button">Request Consultation</a>
-          <a href="/insights/" class="secondary-button">Read Briefings</a>
-        </div>
-      </div>
-
-      <div class="document-panel">
-        <div class="border-b border-line bg-navy px-6 py-5 text-ivory">
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-ivory/60">Board Brief</p>
-          <div class="mt-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <h2 class="font-display text-4xl">Meridian & Co Advisors</h2>
-            <span class="text-xs font-bold uppercase tracking-wide text-gold">Sample firm profile</span>
-          </div>
-        </div>
-        <div class="divide-y divide-line px-6">
-          {[
-            ['Position', 'Careful advisory support for business owners and leadership teams.'],
-            ['Tone', 'Measured, plain-spoken, and appropriate for accounting, legal, finance, and consulting websites.'],
-            ['Proof Standard', 'No real clients, reviews, awards, certifications, or guaranteed outcomes are claimed.'],
-            ['Primary Action', 'A structured consultation request that gathers useful context before a call.']
-          ].map((row) => (
-            <div class="grid gap-2 py-5 sm:grid-cols-[0.28fr_1fr]">
-              <p class="field-label">{row[0]}</p>
-              <p class="text-sm leading-6 text-slate">{row[1]}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-pad bg-ivory">
-    <div class="container-shell">
-      <div class="mb-10 max-w-3xl">
-        <p class="eyebrow">Service Register</p>
-        <h2 class="section-heading mt-3">Services organized like a professional engagement file.</h2>
-        <p class="body-copy mt-4">
-          Instead of generic tiles, the services are arranged as a reference table a prospect can scan quickly before enquiring.
+  <section class="bg-ivory">
+    <div class="container-shell grid gap-12 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-28">
+      <div>
+        <p class="eyebrow">Professional Services Website Demo</p>
+        <h1 class="display-heading mt-5">Clear advice for careful decisions.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate">
+          Meridian & Co Advisors is a fictional advisory firm concept created to show how Webleee can build serious, structured websites for professional services companies.
         </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="/contact/" class="primary-button">Request Consultation</a>
+          <a href="/services/" class="secondary-button">View Services</a>
+        </div>
       </div>
-      <ServiceGrid />
-    </div>
-  </section>
-
-  <section class="section-pad bg-navy text-ivory">
-    <div class="container-shell grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-      <div>
-        <p class="eyebrow">Who This Fits</p>
-        <h2 class="font-display text-4xl leading-tight text-ivory sm:text-5xl">A website structure for firms where trust is earned quietly.</h2>
-      </div>
-      <div class="grid gap-px overflow-hidden border border-ivory/10 bg-ivory/10 md:grid-cols-3">
-        {[
-          ['Owner-led companies', 'Need advisory services explained without making the site feel sales-heavy.'],
-          ['Professional practices', 'Need clear service scope, thoughtful tone, and simple enquiry routing.'],
-          ['Specialist consultants', 'Need insights, process, and positioning to support high-consideration decisions.']
-        ].map((segment) => (
-          <article class="bg-navy p-6">
-            <h3 class="font-display text-3xl text-ivory">{segment[0]}</h3>
-            <p class="mt-4 text-sm leading-6 text-ivory/68">{segment[1]}</p>
-          </article>
-        ))}
+      <div class="board-card p-4">
+        <img class="h-[520px] w-full object-cover" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1300&q=80" alt="Professional advisory meeting room" />
       </div>
     </div>
   </section>
 
-  <section class="section-pad bg-paper">
-    <div class="container-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-      <div>
-        <p class="eyebrow">Decision File</p>
-        <h2 class="section-heading mt-3">A calmer path from enquiry to next steps.</h2>
-      </div>
-      <div class="document-panel px-6">
-        {[
-          ['01', 'Initial context', 'The prospect explains the business issue, service area, and urgency.'],
-          ['02', 'Document review', 'The firm organizes records, reports, obligations, and practical constraints.'],
-          ['03', 'Options memo', 'The conversation turns into clear tradeoffs, priorities, and possible next steps.'],
-          ['04', 'Ongoing support', 'Follow-up work is framed around a defined scope and review rhythm.']
-        ].map((step) => (
-          <article class="document-row">
-            <p class="font-display text-3xl text-gold">{step[0]}</p>
-            <h3 class="font-display text-2xl text-navy">{step[1]}</h3>
-            <p class="text-sm leading-6 text-slate">{step[2]}</p>
-          </article>
-        ))}
-      </div>
+  <section class="border-y border-line bg-paper py-8">
+    <div class="container-shell grid gap-5 md:grid-cols-3">
+      {[
+        ['Structured', 'Clear sections for complex services and regulated industries.'],
+        ['Measured', 'Serious language without fake client claims or outcome promises.'],
+        ['Conversion-ready', 'Consultation paths built for firms that need qualified enquiries.']
+      ].map((item) => (
+        <article class="border-l-2 border-gold pl-5">
+          <h2 class="font-display text-2xl text-navy">{item[0]}</h2>
+          <p class="mt-2 text-sm leading-6 text-slate">{item[1]}</p>
+        </article>
+      ))}
     </div>
   </section>
 
@@ -110,22 +46,87 @@ const description = 'A fictional professional services website demo for accounta
     <div class="container-shell">
       <div class="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p class="eyebrow">Briefing Library</p>
-          <h2 class="section-heading mt-3">Publication-style insights for serious readers.</h2>
+          <p class="eyebrow">Services Overview</p>
+          <h2 class="section-heading mt-3">Advisory services presented with clarity.</h2>
         </div>
-        <a href="/insights/" class="secondary-button lg:mb-1">Open Insights</a>
+        <a href="/services/" class="secondary-button lg:mb-1">All Services</a>
+      </div>
+      <ServiceGrid />
+    </div>
+  </section>
+
+  <section class="section-pad bg-navy text-ivory">
+    <div class="container-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div>
+        <p class="eyebrow">Who We Help</p>
+        <h2 class="font-display text-4xl leading-tight text-ivory sm:text-5xl">Built for firms serving complex business decisions.</h2>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {['Owner-managed companies', 'Professional practices', 'Growth-stage teams', 'Family businesses', 'Service firms', 'Risk-aware operators'].map((item) => (
+          <div class="border border-ivory/10 bg-ivory/[0.04] p-5 text-sm font-semibold uppercase tracking-wide text-ivory/80">{item}</div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-paper">
+    <div class="container-shell grid gap-5 md:grid-cols-4">
+      {[
+        ['7', 'Advisory service areas represented'],
+        ['4', 'Review stages in the fictional process'],
+        ['5', 'Core pages for professional service firms'],
+        ['0', 'Real client claims or guaranteed outcomes']
+      ].map((stat) => (
+        <article class="board-card p-6">
+          <p class="font-display text-5xl text-navy">{stat[0]}</p>
+          <p class="mt-3 text-sm leading-6 text-slate">{stat[1]}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-pad bg-ivory">
+    <div class="container-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+      <div>
+        <p class="eyebrow">Advisory Process</p>
+        <h2 class="section-heading mt-3">A calm sequence for high-trust decisions.</h2>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {[
+          ['Discover', 'Understand the business context, concerns, priorities, and constraints.'],
+          ['Review', 'Organize records, reporting, obligations, risks, and planning questions.'],
+          ['Advise', 'Frame options, tradeoffs, timing, and next-step recommendations.'],
+          ['Support', 'Help the business keep momentum with ongoing advisory check-ins.']
+        ].map((step) => (
+          <article class="border-t-2 border-gold bg-paper p-6">
+            <h3 class="font-display text-3xl text-navy">{step[0]}</h3>
+            <p class="mt-3 text-sm leading-6 text-slate">{step[1]}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-paper">
+    <div class="container-shell">
+      <div class="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="eyebrow">Insights Preview</p>
+          <h2 class="section-heading mt-3">Thoughtful article cards without fake authority claims.</h2>
+        </div>
+        <a href="/insights/" class="secondary-button lg:mb-1">Read Insights</a>
       </div>
       <InsightCards />
     </div>
   </section>
 
-  <section class="bg-gold py-14 text-navy">
-    <div class="container-shell grid gap-6 lg:grid-cols-[1fr_0.45fr] lg:items-center">
+  <section class="bg-gold py-16 text-navy">
+    <div class="container-shell flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
       <div>
         <p class="text-xs font-bold uppercase tracking-[0.2em] text-navy/70">Consultation CTA</p>
-        <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Make the first enquiry feel structured.</h2>
+        <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Discuss the next business decision.</h2>
       </div>
-      <a href="/contact/" class="inline-flex min-h-12 items-center justify-center bg-navy px-6 py-3 text-sm font-bold uppercase tracking-wide text-ivory transition hover:bg-paper hover:text-navy focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 focus:ring-offset-gold">Request Consultation</a>
+      <a href="/contact/" class="inline-flex min-h-12 items-center justify-center bg-navy px-6 py-3 text-sm font-bold uppercase tracking-wide text-ivory transition hover:bg-ivory hover:text-navy">Request Consultation</a>
     </div>
   </section>
 </SiteLayout>

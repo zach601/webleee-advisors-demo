@@ -7,48 +7,40 @@ const description = 'Explore fictional advisory, tax planning, accounting, compl
 ---
 
 <SiteLayout title={title} description={description} path="/services/">
-  <section class="border-b border-line bg-paper">
-    <div class="container-shell grid gap-10 py-16 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-      <div class="border-l-4 border-gold pl-6">
+  <section class="bg-paper">
+    <div class="container-shell grid gap-10 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+      <div>
         <p class="eyebrow">Services</p>
-        <h1 class="page-heading mt-4">A service register, not a sales brochure.</h1>
+        <h1 class="page-heading mt-4">Serious service pages for complex work.</h1>
       </div>
-      <p class="body-copy max-w-3xl lg:justify-self-end">
-        Meridian & Co Advisors is fictional. This page shows how a professional firm can explain scope, fit, and example outputs without implying real client work or guaranteed results.
+      <p class="body-copy max-w-2xl lg:justify-self-end">
+        Meridian & Co Advisors is a fictional firm. These services show how accountants, lawyers, consultants, financial advisors, brokers, and advisory companies can communicate scope without overpromising.
       </p>
     </div>
   </section>
 
   <section class="section-pad bg-ivory">
-    <div class="container-shell grid gap-8 lg:grid-cols-[0.32fr_1fr]">
-      <aside class="document-panel h-fit p-6">
-        <p class="field-label">Use this page for</p>
-        <ul class="mt-5 space-y-4 text-sm leading-6 text-slate">
-          <li>Explaining complex scope in plain language.</li>
-          <li>Helping prospects self-select the right service area.</li>
-          <li>Creating a more serious tone than generic service cards.</li>
-        </ul>
-      </aside>
+    <div class="container-shell">
       <ServiceGrid />
     </div>
   </section>
 
   <section class="section-pad bg-navy text-ivory">
-    <div class="container-shell grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
+    <div class="container-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
       <div>
         <p class="eyebrow">Service Structure</p>
-        <h2 class="font-display text-4xl leading-tight text-ivory sm:text-5xl">Each engagement needs a clear frame before advice begins.</h2>
+        <h2 class="font-display text-4xl leading-tight text-ivory sm:text-5xl">Make difficult services easier to understand.</h2>
       </div>
-      <div class="divide-y divide-ivory/10 border-y border-ivory/10">
+      <div class="grid gap-4 sm:grid-cols-2">
         {[
           ['Scope', 'Define what the service covers and where the engagement begins.'],
           ['Records', 'Gather reports, documents, policies, schedules, and planning context.'],
           ['Review', 'Assess obligations, risks, options, and decision priorities.'],
           ['Roadmap', 'Create practical next steps for follow-up conversations.']
         ].map((item) => (
-          <article class="grid gap-3 py-6 sm:grid-cols-[0.28fr_1fr]">
+          <article class="border border-ivory/10 bg-ivory/[0.04] p-6">
             <h3 class="font-display text-3xl text-ivory">{item[0]}</h3>
-            <p class="text-sm leading-6 text-ivory/70">{item[1]}</p>
+            <p class="mt-3 text-sm leading-6 text-ivory/70">{item[1]}</p>
           </article>
         ))}
       </div>
