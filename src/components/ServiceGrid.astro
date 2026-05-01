@@ -1,0 +1,21 @@
+---
+const services = [
+  ['Business Advisory', 'Structured guidance for owners reviewing operations, growth options, and decision points.'],
+  ['Tax Planning', 'Fictional planning copy for businesses preparing records, timing obligations, and future commitments.'],
+  ['Accounting Support', 'Monthly support, bookkeeping coordination, and clearer financial administration for growing teams.'],
+  ['Compliance Support', 'Organized workflows for policy, filing, reporting, and documentation readiness.'],
+  ['Strategy Consulting', 'Focused planning sessions for market positioning, service design, and operational priorities.'],
+  ['Financial Reporting', 'Management reporting structures that make performance easier to review and discuss.'],
+  ['Risk Review', 'Practical risk conversations around process, governance, continuity, and internal controls.']
+];
+---
+
+<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+  {services.map((service, index) => (
+    <article class="board-card p-6">
+      <div class="mb-8 flex h-10 w-10 items-center justify-center bg-blue text-sm font-bold text-navy">{String(index + 1).padStart(2, '0')}</div>
+      <h3 class="font-display text-2xl text-navy">{service[0]}</h3>
+      <p class="mt-3 text-sm leading-6 text-slate">{service[1]}</p>
+    </article>
+  ))}
+</div>

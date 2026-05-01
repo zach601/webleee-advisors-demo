@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+
+const {
+  title,
+  description,
+  path = '/',
+  image = 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80'
+} = Astro.props;
+
+const siteName = 'Meridian & Co Advisors';
+const canonical = `https://webleee-advisors-demo.pages.dev${path}`;
+const navigation = [
+  { href: '/', label: 'Home' },
+  { href: '/services/', label: 'Services' },
+  { href: '/about/', label: 'About' },
+  { href: '/insights/', label: 'Insights' },
+  { href: '/contact/', label: 'Contact' }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+  </head>
+  <body>
+    <header class="sticky top-0 z-50 border-b border-line bg-ivory/90 backdrop-blur">
+      <nav class="container-shell flex min-h-20 items-center justify-between gap-5" aria-label="Primary navigation">
+        <a href="/" class="font-display text-2xl text-navy" aria-label="Meridian and Co Advisors home">Meridian & Co</a>
+        <div class="hidden items-center gap-7 lg:flex">
+          {navigation.map((item) => (
+            <a class="text-sm font-semibold uppercase tracking-wide text-slate transition hover:text-gold" href={item.href}>{item.label}</a>
+          ))}
+        </div>
+        <a href="/contact/" class="primary-button hidden lg:inline-flex">Consultation</a>
+      </nav>
+      <div class="container-shell flex gap-5 overflow-x-auto border-t border-line py-3 lg:hidden" aria-label="Mobile navigation">
+        {navigation.map((item) => (
+          <a class="shrink-0 text-xs font-bold uppercase tracking-wide text-slate" href={item.href}>{item.label}</a>
+        ))}
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="bg-navy text-ivory">
+      <div class="container-shell grid gap-10 py-12 lg:grid-cols-[1.15fr_0.85fr_0.85fr]">
+        <div>
+          <p class="eyebrow">Portfolio Demo</p>
+          <h2 class="mt-3 font-display text-3xl">Meridian & Co Advisors</h2>
+          <p class="mt-4 max-w-xl text-sm leading-6 text-ivory/70">
+            This is a fictional demo website created by Webleee to showcase polished websites for accountants, lawyers, consultants, advisors, brokers, and business service firms.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wide text-gold">Pages</h3>
+          <ul class="mt-4 space-y-2 text-sm text-ivory/70">
+            {navigation.map((item) => (
+              <li><a class="hover:text-gold" href={item.href}>{item.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wide text-gold">Contact</h3>
+          <ul class="mt-4 space-y-2 text-sm text-ivory/70">
+            <li>(000) 000-0000</li>
+            <li>advisors@example.com</li>
+            <li>Suite 000, Business District</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-ivory/10 py-5">
+        <div class="container-shell flex flex-col gap-2 text-xs font-semibold uppercase tracking-wide text-ivory/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>Demo website by Webleee</span>
+          <span>Fictional professional services demo</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+import SiteLayout from '../components/SiteLayout.astro';
+import InsightCards from '../components/InsightCards.astro';
+
+const title = 'Insights | Meridian & Co Advisors Demo';
+const description = 'Fictional professional services insight previews for Meridian & Co Advisors, covering growth, tax season, reporting, and stronger business systems.';
+---
+
+<SiteLayout title={title} description={description} path="/insights/">
+  <section class="bg-paper">
+    <div class="container-shell py-20">
+      <p class="eyebrow">Insights</p>
+      <h1 class="page-heading mt-4 max-w-4xl">Article previews for serious business readers.</h1>
+      <p class="body-copy mt-6 max-w-2xl">
+        These are fictional article previews created for a Webleee portfolio demo. They do not represent real advisory work, client outcomes, financial advice, or legal advice.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-ivory">
+    <div class="container-shell">
+      <InsightCards />
+    </div>
+  </section>
+
+  <section class="section-pad bg-paper">
+    <div class="container-shell grid gap-8 lg:grid-cols-3">
+      {[
+        ['Growth Planning', 'Use structured content to help prospects understand strategic advisory topics.'],
+        ['Reporting Discipline', 'Present finance and operations themes in a calm, boardroom-ready format.'],
+        ['Risk Awareness', 'Discuss process and governance without making legal or financial promises.']
+      ].map((item) => (
+        <article class="border-t-2 border-gold bg-ivory p-6">
+          <h2 class="font-display text-3xl text-navy">{item[0]}</h2>
+          <p class="mt-3 text-sm leading-6 text-slate">{item[1]}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

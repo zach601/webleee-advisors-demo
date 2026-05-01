@@ -1,0 +1,49 @@
+---
+import SiteLayout from '../components/SiteLayout.astro';
+import ServiceGrid from '../components/ServiceGrid.astro';
+
+const title = 'Services | Meridian & Co Advisors Demo';
+const description = 'Explore fictional advisory, tax planning, accounting, compliance, strategy, reporting, and risk review services for Meridian & Co Advisors.';
+---
+
+<SiteLayout title={title} description={description} path="/services/">
+  <section class="bg-paper">
+    <div class="container-shell grid gap-10 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+      <div>
+        <p class="eyebrow">Services</p>
+        <h1 class="page-heading mt-4">Serious service pages for complex work.</h1>
+      </div>
+      <p class="body-copy max-w-2xl lg:justify-self-end">
+        Meridian & Co Advisors is a fictional firm. These services show how accountants, lawyers, consultants, financial advisors, brokers, and advisory companies can communicate scope without overpromising.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-ivory">
+    <div class="container-shell">
+      <ServiceGrid />
+    </div>
+  </section>
+
+  <section class="section-pad bg-navy text-ivory">
+    <div class="container-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+      <div>
+        <p class="eyebrow">Service Structure</p>
+        <h2 class="font-display text-4xl leading-tight text-ivory sm:text-5xl">Make difficult services easier to understand.</h2>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {[
+          ['Scope', 'Define what the service covers and where the engagement begins.'],
+          ['Records', 'Gather reports, documents, policies, schedules, and planning context.'],
+          ['Review', 'Assess obligations, risks, options, and decision priorities.'],
+          ['Roadmap', 'Create practical next steps for follow-up conversations.']
+        ].map((item) => (
+          <article class="border border-ivory/10 bg-ivory/[0.04] p-6">
+            <h3 class="font-display text-3xl text-ivory">{item[0]}</h3>
+            <p class="mt-3 text-sm leading-6 text-ivory/70">{item[1]}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</SiteLayout>
